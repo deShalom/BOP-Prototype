@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Linq;
 using UnityEngine.Windows.Speech;
 using System;
+using Random = UnityEngine.Random;
 
 public class VoiceRec : MonoBehaviour
 {
@@ -11,13 +12,18 @@ public class VoiceRec : MonoBehaviour
     private Dictionary<string, Action> actions = new Dictionary<string, Action>();
     GameObject currentQuiz;
     string quizName;
+    public GameObject[] Quizes;
 
     private void Start()
     {
         actions.Add("sparrow hawk", hawkSaid);
+        actions.Add("cuckoo", hawkSaid);
+        actions.Add("robin", hawkSaid);
+        actions.Add("peregrine falcon", hawkSaid);
         keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
         keywordRecognizer.OnPhraseRecognized += recognisedWord;
         keywordRecognizer.Start();
+        nextQuiz();
     }
 
     void hawkSaid()
@@ -32,8 +38,9 @@ public class VoiceRec : MonoBehaviour
 
         if (speech.text == quizName)
         {
-            print("This lil bitch works my guy");
             actions[speech.text].Invoke();
+            currentQuiz.SetActive(false);
+            nextQuiz();
         }
 
     }
@@ -42,7 +49,12 @@ public class VoiceRec : MonoBehaviour
     {
         currentQuiz = GameObject.FindWithTag("Quiz");
         quizName = currentQuiz.name;
-        print(quizName + "Quiz Check");
+    }
+
+    void nextQuiz()
+    {
+        int rando = Random.Range(1, Quizes.Length);
+        Quizes[rando].SetActive(true);
     }
 
 }
