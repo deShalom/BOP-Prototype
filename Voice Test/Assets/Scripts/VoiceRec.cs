@@ -8,12 +8,14 @@ using Random = UnityEngine.Random;
 
 public class VoiceRec : MonoBehaviour
 {
+    //Variables
     private KeywordRecognizer keywordRecognizer;
     private Dictionary<string, Action> actions = new Dictionary<string, Action>();
     GameObject currentQuiz;
     string quizName;
     public GameObject gameMan;
 
+    //Methods
     private void Start()
     {
         actions.Add("sparrow hawk", hawkSaid);
@@ -40,6 +42,7 @@ public class VoiceRec : MonoBehaviour
         {
             actions[speech.text].Invoke();
             currentQuiz.SetActive(false);
+            gameMan.GetComponent<RewardManager>().correctChoiceReward(10);
             gameMan.GetComponent<QuizManager>().nextQuiz();
         }
 
@@ -52,3 +55,4 @@ public class VoiceRec : MonoBehaviour
     }
 
 }
+//All code written by Jay Underwood (deShalom)
