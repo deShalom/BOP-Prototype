@@ -29,6 +29,7 @@ public class RewardManager : MonoBehaviour
         balance = balance + reward;
     }
 
+    //Implement possibly?
     public void completeQuizReward()
     {
         int randomReward = Random.Range(10, 50);

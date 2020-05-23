@@ -7,6 +7,7 @@ public class QuizManager : MonoBehaviour
     //Variables
     public GameObject[] Quizes;
     private int previousQuiz;
+    private int cycleCounter = 10;
 
     public int drawnQuiz
     {
@@ -25,10 +26,24 @@ public class QuizManager : MonoBehaviour
         }
         else
         {
+            cycleCounter -= 1;
+            cycleCheck();
             Quizes[rando].SetActive(true);
             drawnQuiz = rando;
         }
 
+    }
+
+    void cycleCheck()
+    {
+        if (cycleCounter <= 0)
+        {
+            print("Cycle complete.");
+        }
+        else
+        {
+            print("Cycle check complete.");
+        }
     }
 
 }

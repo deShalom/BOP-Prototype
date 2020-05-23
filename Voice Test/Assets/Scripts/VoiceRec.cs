@@ -45,6 +45,13 @@ public class VoiceRec : MonoBehaviour
             gameMan.GetComponent<RewardManager>().correctChoiceReward(10);
             gameMan.GetComponent<QuizManager>().nextQuiz();
         }
+        else
+        {
+            print("Wrong word silly!");
+            currentQuiz.SetActive(false);
+            gameMan.GetComponent<RewardManager>().correctChoiceReward(0);
+            gameMan.GetComponent<QuizManager>().nextQuiz();
+        }
 
     }
 
