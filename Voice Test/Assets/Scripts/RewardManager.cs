@@ -7,8 +7,7 @@ public class RewardManager : MonoBehaviour
 {
     //Variables
     [SerializeField]
-    private int m_balance;
-
+    private int m_balance; 
     //UI tester variables
     public Text balDisplay;
 
@@ -34,6 +33,24 @@ public class RewardManager : MonoBehaviour
     {
         int randomReward = Random.Range(10, 50);
         balance = balance + randomReward;
+    }
+
+    public void checkScores()
+    {
+        if (!PlayerPrefs.HasKey("GlobalScore"))
+        {
+            PlayerPrefs.SetFloat("GlobalScore", 0f);
+        }
+        else
+        {
+            print(PlayerPrefs.GetFloat("GlobalScore"));
+        }
+    }
+
+    public void updateScore()
+    {
+        PlayerPrefs.SetFloat("GlobalScore", PlayerPrefs.GetFloat("GlobalScore") + balance);
+        print(PlayerPrefs.GetFloat("GlobalScore"));
     }
 
 }

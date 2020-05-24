@@ -8,6 +8,7 @@ public class QuizManager : MonoBehaviour
     public GameObject[] Quizes;
     private int previousQuiz;
     private int cycleCounter = 10;
+    public GameObject gameMan;
 
     public int drawnQuiz
     {
@@ -39,6 +40,7 @@ public class QuizManager : MonoBehaviour
         if (cycleCounter <= 0)
         {
             print("Cycle complete.");
+            gameMan.GetComponent<RewardManager>().updateScore();
         }
         else
         {

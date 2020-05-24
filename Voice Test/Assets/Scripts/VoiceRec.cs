@@ -26,6 +26,9 @@ public class VoiceRec : MonoBehaviour
         keywordRecognizer.OnPhraseRecognized += recognisedWord;
         keywordRecognizer.Start();
         gameMan.GetComponent<QuizManager>().nextQuiz();
+
+        //Move to awake if possible
+        gameMan.GetComponent<RewardManager>().checkScores();
     }
 
     void hawkSaid()
