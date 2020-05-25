@@ -8,9 +8,11 @@ public class PassTest : MonoBehaviour
 
     private void Awake()
     {
-        StartCoroutine(Test());
+        //StartCoroutine(Test());
+        StartCoroutine(Test2());
     }
 
+    //Saves values
     IEnumerator Test()
     {
         WWWForm form = new WWWForm();
@@ -35,6 +37,29 @@ public class PassTest : MonoBehaviour
             }
 
         }
+    }
 
+    //Returns values
+    IEnumerator Test2()
+    {
+        WWWForm form2 = new WWWForm();
+        form2.AddField("name", "Geoff");
+
+        using (UnityWebRequest www = UnityWebRequest.Post("https://de-shalom.co.uk/camel.php?", form2))
+        {
+            www.chunkedTransfer = false;////ADD THIS LINE
+            yield return www.SendWebRequest();
+
+            if (www.isNetworkError || www.isHttpError)
+            {
+                Debug.Log(www.error);
+            }
+            else
+            {
+                Debug.Log("Form upload complete!");
+                print(www.downloadHandler.text);
+            }
+
+        }
     }
 }
