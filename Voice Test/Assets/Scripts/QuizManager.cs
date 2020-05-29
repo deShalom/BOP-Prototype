@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class QuizManager : MonoBehaviour
 {
     //Variables
@@ -9,6 +9,8 @@ public class QuizManager : MonoBehaviour
     private int previousQuiz;
     private int cycleCounter = 10;
     public GameObject gameMan;
+
+    public Text counter;
 
     public int drawnQuiz
     {
@@ -48,5 +50,9 @@ public class QuizManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        counter.text = cycleCounter.ToString();
+    }
 }
 //All code written by Jay Underwood (deShalom)
