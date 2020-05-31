@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\QuizManager.cs" />
     <Compile Include="Assets\Scripts\RewardManager.cs" />
     <Compile Include="Assets\Scripts\UIDrag.cs" />
+    <Compile Include="Assets\Scripts\VideoManager.cs" />
     <Compile Include="Assets\Scripts\VoiceRec.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />

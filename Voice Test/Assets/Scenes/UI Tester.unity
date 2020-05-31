@@ -3660,6 +3660,7 @@ GameObject:
   - component: {fileID: 1063925619}
   - component: {fileID: 1063925620}
   - component: {fileID: 1063925621}
+  - component: {fileID: 1063925622}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -3709,6 +3710,18 @@ MonoBehaviour:
   setMenu: {fileID: 239699109}
   sMenu: {fileID: 1277886269}
   vMenu: {fileID: 726737226}
+--- !u!114 &1063925622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063925618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b3729ad91f99c4097dd99c4788b0de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1066826944
 GameObject:
   m_ObjectHideFlags: 0
@@ -3880,7 +3893,18 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1063925622}
+        m_MethodName: windowedDropdownInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1091937320
 MonoBehaviour:
@@ -4206,7 +4230,7 @@ MonoBehaviour:
     spaceCount: 1
     wordCount: 2
     linkCount: 0
-    lineCount: 2
+    lineCount: 3
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0

@@ -1,9 +1,13 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - GUIManager
+    - HotbarManager
     - LoadManager
     - QuizManager
     - RewardManager
+    - UIDrag
+    - VideoManager
     - VoiceRec
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
@@ -33,12 +37,19 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.EventTrigger
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.Dropdown
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Mask
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Scrollbar
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
+    - UnityEngine.UI.Toggle
   sceneClasses:
     Assets/Scenes/Quiz.unity:
     - Class: 1
@@ -49,7 +60,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
@@ -60,29 +75,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11192}
     - Class: 114
-      Script: {instanceID: 11412}
+      Script: {instanceID: 11414}
     - Class: 114
-      Script: {instanceID: 11480}
+      Script: {instanceID: 11482}
     - Class: 114
-      Script: {instanceID: 11536}
+      Script: {instanceID: 11538}
     - Class: 114
-      Script: {instanceID: 11668}
+      Script: {instanceID: 11670}
     - Class: 114
-      Script: {instanceID: 12082}
+      Script: {instanceID: 12084}
     - Class: 114
-      Script: {instanceID: 12200}
+      Script: {instanceID: 12202}
     - Class: 114
-      Script: {instanceID: 12898}
+      Script: {instanceID: 12500}
     - Class: 114
-      Script: {instanceID: 13242}
+      Script: {instanceID: 12690}
     - Class: 114
-      Script: {instanceID: 13554}
+      Script: {instanceID: 12904}
     - Class: 114
-      Script: {instanceID: 13654}
+      Script: {instanceID: 13248}
     - Class: 114
-      Script: {instanceID: 14264}
+      Script: {instanceID: 13282}
     - Class: 114
-      Script: {instanceID: 15942}
+      Script: {instanceID: 13562}
+    - Class: 114
+      Script: {instanceID: 13662}
+    - Class: 114
+      Script: {instanceID: 14204}
+    - Class: 114
+      Script: {instanceID: 14272}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -123,27 +144,45 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11192}
     - Class: 114
-      Script: {instanceID: 11536}
+      Script: {instanceID: 11212}
     - Class: 114
-      Script: {instanceID: 12200}
+      Script: {instanceID: 11482}
     - Class: 114
-      Script: {instanceID: 12252}
+      Script: {instanceID: 11486}
     - Class: 114
-      Script: {instanceID: 12898}
+      Script: {instanceID: 11538}
     - Class: 114
-      Script: {instanceID: 13242}
+      Script: {instanceID: 12028}
     - Class: 114
-      Script: {instanceID: 13260}
+      Script: {instanceID: 12202}
     - Class: 114
-      Script: {instanceID: 13554}
+      Script: {instanceID: 12254}
     - Class: 114
-      Script: {instanceID: 13654}
+      Script: {instanceID: 12552}
     - Class: 114
-      Script: {instanceID: 13928}
+      Script: {instanceID: 12690}
     - Class: 114
-      Script: {instanceID: 14264}
+      Script: {instanceID: 12904}
     - Class: 114
-      Script: {instanceID: 15942}
+      Script: {instanceID: 13248}
+    - Class: 114
+      Script: {instanceID: 13266}
+    - Class: 114
+      Script: {instanceID: 13562}
+    - Class: 114
+      Script: {instanceID: 13662}
+    - Class: 114
+      Script: {instanceID: 13936}
+    - Class: 114
+      Script: {instanceID: 14240}
+    - Class: 114
+      Script: {instanceID: 14272}
+    - Class: 114
+      Script: {instanceID: 14292}
+    - Class: 114
+      Script: {instanceID: 14314}
+    - Class: 114
+      Script: {instanceID: 17680}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -167,6 +206,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: 6d0e2f33a4b0812ac29cbe0345e4dc79
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GUIManager
   - hash:
       serializedVersion: 2
       Hash: c42672c997f8be6b1aa86a927ebea785
@@ -361,7 +406,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: cd1f3a7ddf592f67fb425fe05de51360
+      Hash: ef35e1016a969d5e9ec481ddbcc2c08c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: QuizManager
@@ -409,6 +454,12 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UIDrag
+  - hash:
+      serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -431,6 +482,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: SpriteSkinEntity
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LoadManager
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -521,6 +578,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: Physics2DRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: e44325fc935154a6c28be5faee7bab76
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HotbarManager
   - hash:
       serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
@@ -664,9 +727,9 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: LoadManager
+    className: VideoManager
   platform: 5
   scenePathNames:
   - Assets/Scenes/UI Tester.unity
   - Assets/Scenes/Quiz.unity
-  playerPath: C:/Users/Mjoln/Desktop/BOP Version 0.01/Voice Test.exe
+  playerPath: C:/Users/Mjoln/Desktop/0.0.2/Voice Test.exe
