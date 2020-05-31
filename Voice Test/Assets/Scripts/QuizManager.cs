@@ -50,7 +50,8 @@ public class QuizManager : MonoBehaviour
             gameMan.GetComponent<RewardManager>().updateScore();
             qPanel.SetActive(false);
             eogPanel.SetActive(true);
-            t1.text = PlayerPrefs.GetFloat("GlobalScore").ToString();
+            //t1.text = PlayerPrefs.GetFloat("GlobalScore").ToString();
+            t1.text = gameObject.GetComponent<RewardManager>().balance.ToString();
             t2.text = cOne.ToString();
             t3.text = cTwo.ToString();
         }
