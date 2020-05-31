@@ -14,7 +14,7 @@ public class VoiceRec : MonoBehaviour
     GameObject currentQuiz;
     string quizName;
     public GameObject gameMan;
-
+    int correctCounter, incorrectCounter;
     //Methods
     private void Start()
     {
@@ -22,10 +22,18 @@ public class VoiceRec : MonoBehaviour
         actions.Add("cuckoo", hawkSaid);
         actions.Add("robin", hawkSaid);
         actions.Add("peregrine falcon", hawkSaid);
+        actions.Add("barn owl", hawkSaid);
+        actions.Add("buzzard", hawkSaid);
+        actions.Add("golden eagle", hawkSaid);
+        actions.Add("kestrel", hawkSaid);
+        actions.Add("merlin", hawkSaid);
+        actions.Add("ospray", hawkSaid);
+        actions.Add("red kite", hawkSaid);
+        actions.Add("tawny owl", hawkSaid);
         keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
         keywordRecognizer.OnPhraseRecognized += recognisedWord;
         keywordRecognizer.Start();
-        gameMan.GetComponent<QuizManager>().nextQuiz();
+        gameMan.GetComponent<QuizManager>().nextQuiz(correctCounter, incorrectCounter);
 
         //Move to awake if possible
         gameMan.GetComponent<RewardManager>().checkScores();
@@ -43,17 +51,19 @@ public class VoiceRec : MonoBehaviour
 
         if (speech.text == quizName)
         {
+            correctCounter++;
             actions[speech.text].Invoke();
             currentQuiz.SetActive(false);
             gameMan.GetComponent<RewardManager>().correctChoiceReward(10);
-            gameMan.GetComponent<QuizManager>().nextQuiz();
+            gameMan.GetComponent<QuizManager>().nextQuiz(correctCounter, incorrectCounter);
         }
         else
         {
+            incorrectCounter++;
             print("Wrong word silly!");
             currentQuiz.SetActive(false);
             gameMan.GetComponent<RewardManager>().correctChoiceReward(0);
-            gameMan.GetComponent<QuizManager>().nextQuiz();
+            gameMan.GetComponent<QuizManager>().nextQuiz(correctCounter, incorrectCounter);
         }
 
     }
