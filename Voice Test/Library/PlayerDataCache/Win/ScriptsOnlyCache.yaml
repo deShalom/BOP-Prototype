@@ -13,6 +13,8 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
+    - UnityEditor.Tilemaps.GridPaletteBrushes
+    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -71,37 +73,37 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11192}
+      Script: {instanceID: 11194}
     - Class: 114
-      Script: {instanceID: 11414}
+      Script: {instanceID: 11416}
     - Class: 114
-      Script: {instanceID: 11482}
+      Script: {instanceID: 11484}
     - Class: 114
-      Script: {instanceID: 11538}
+      Script: {instanceID: 11540}
     - Class: 114
-      Script: {instanceID: 11670}
+      Script: {instanceID: 11672}
     - Class: 114
-      Script: {instanceID: 12084}
+      Script: {instanceID: 12086}
     - Class: 114
-      Script: {instanceID: 12202}
+      Script: {instanceID: 12204}
     - Class: 114
-      Script: {instanceID: 12500}
+      Script: {instanceID: 12502}
     - Class: 114
-      Script: {instanceID: 12690}
+      Script: {instanceID: 12692}
     - Class: 114
-      Script: {instanceID: 12904}
+      Script: {instanceID: 12906}
     - Class: 114
-      Script: {instanceID: 13248}
+      Script: {instanceID: 13250}
     - Class: 114
-      Script: {instanceID: 13282}
+      Script: {instanceID: 13284}
     - Class: 114
-      Script: {instanceID: 13564}
+      Script: {instanceID: 13566}
     - Class: 114
-      Script: {instanceID: 13664}
+      Script: {instanceID: 13666}
     - Class: 114
-      Script: {instanceID: 14206}
+      Script: {instanceID: 14208}
     - Class: 114
-      Script: {instanceID: 14274}
+      Script: {instanceID: 14276}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -140,47 +142,47 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11192}
+      Script: {instanceID: 11194}
     - Class: 114
-      Script: {instanceID: 11212}
+      Script: {instanceID: 11214}
     - Class: 114
-      Script: {instanceID: 11482}
+      Script: {instanceID: 11484}
     - Class: 114
-      Script: {instanceID: 11486}
+      Script: {instanceID: 11488}
     - Class: 114
-      Script: {instanceID: 11538}
+      Script: {instanceID: 11540}
     - Class: 114
-      Script: {instanceID: 12028}
+      Script: {instanceID: 12030}
     - Class: 114
-      Script: {instanceID: 12202}
+      Script: {instanceID: 12204}
     - Class: 114
-      Script: {instanceID: 12254}
+      Script: {instanceID: 12256}
     - Class: 114
-      Script: {instanceID: 12552}
+      Script: {instanceID: 12554}
     - Class: 114
-      Script: {instanceID: 12690}
+      Script: {instanceID: 12692}
     - Class: 114
-      Script: {instanceID: 12904}
+      Script: {instanceID: 12906}
     - Class: 114
-      Script: {instanceID: 13248}
+      Script: {instanceID: 13250}
     - Class: 114
-      Script: {instanceID: 13266}
+      Script: {instanceID: 13268}
     - Class: 114
-      Script: {instanceID: 13314}
+      Script: {instanceID: 13316}
     - Class: 114
-      Script: {instanceID: 13564}
+      Script: {instanceID: 13566}
     - Class: 114
-      Script: {instanceID: 13664}
+      Script: {instanceID: 13666}
     - Class: 114
-      Script: {instanceID: 13938}
+      Script: {instanceID: 13940}
     - Class: 114
-      Script: {instanceID: 14242}
+      Script: {instanceID: 14244}
     - Class: 114
-      Script: {instanceID: 14274}
+      Script: {instanceID: 14276}
     - Class: 114
-      Script: {instanceID: 14294}
+      Script: {instanceID: 14296}
     - Class: 114
-      Script: {instanceID: 14316}
+      Script: {instanceID: 14318}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -730,4 +732,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/UI Tester.unity
   - Assets/Scenes/Quiz.unity
-  playerPath: C:/Users/Mjoln/Desktop/Yeet/Voice Test.exe
+  playerPath: C:/Users/Mjoln/Desktop/Cursor tester/Voice Test.exe
