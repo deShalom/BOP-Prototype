@@ -732,4 +732,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/UI Tester.unity
   - Assets/Scenes/Quiz.unity
-  playerPath: C:/Users/Mjoln/Desktop/Cursor tester/Voice Test.exe
+  playerPath: C:/Users/Mjoln/Desktop/BOP Tester/Voice Test.exe

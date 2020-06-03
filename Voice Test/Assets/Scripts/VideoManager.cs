@@ -53,6 +53,22 @@ public class VideoManager : MonoBehaviour
                 }
                 else { Screen.SetResolution(800, 600, false); }
                 break;
+            case 2:
+                print("1536 x 2048");
+                if (Screen.fullScreenMode == FullScreenMode.ExclusiveFullScreen)
+                {
+                    Screen.SetResolution(1536, 2048, true);
+                }
+                else { Screen.SetResolution(1536, 2048, false); }
+                break;
+            case 3:
+                print("2560 x 1080");
+                if (Screen.fullScreenMode == FullScreenMode.ExclusiveFullScreen)
+                {
+                    Screen.SetResolution(2560, 1080, true);
+                }
+                else { Screen.SetResolution(2560, 1080, false); }
+                break;
         }
     }
 

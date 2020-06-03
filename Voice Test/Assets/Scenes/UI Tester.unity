@@ -4963,7 +4963,9 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: 800x600
       m_Image: {fileID: 0}
-    - m_Text: Enter Res
+    - m_Text: 1536x2048
+      m_Image: {fileID: 0}
+    - m_Text: 2560x1080
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
